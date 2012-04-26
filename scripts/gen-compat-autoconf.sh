@@ -130,14 +130,13 @@ function kernel_version_req {
 }
 
 cat <<EOF
-#ifndef COMPAT_AUTOCONF_INCLUDED
-#define COMPAT_AUTOCONF_INCLUDED
 /*
  * Automatically generated C config: don't edit
  * $DATE 
  * compat-wireless-2.6: $CREL
  * linux-2.6: $KREL
  */
+#include <linux/version.h>
 #define COMPAT_RELEASE "$CREL"
 #define COMPAT_KERNEL_RELEASE "$KREL"
 EOF
@@ -201,4 +200,3 @@ if [ -f $KLIB_BUILD/Makefile ]; then
 		rm -f $MULT_DEP_FILE
 	fi
 fi
-echo "#endif /* COMPAT_AUTOCONF_INCLUDED */"
