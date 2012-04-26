@@ -283,6 +283,7 @@ mkdir -p include/linux/ include/net/ include/linux/usb \
 	include/trace \
 	include/pcmcia \
 	include/crypto \
+	include/generated \
 	net/mac80211/ net/wireless/ \
 	net/rfkill/ \
 	drivers/ssb/ \
@@ -436,6 +437,7 @@ cp -a $GIT_COMPAT_TREE/include/net/* include/net/
 cp -a $GIT_COMPAT_TREE/include/trace/* include/trace/
 cp -a $GIT_COMPAT_TREE/include/pcmcia/* include/pcmcia/
 cp -a $GIT_COMPAT_TREE/include/crypto/* include/crypto/
+cp -a $GIT_COMPAT_TREE/include/generated/* include/generated/
 rm -f $COMPAT/*.mod.c
 
 # files we suck in for compat-wireless
