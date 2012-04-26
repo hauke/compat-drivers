@@ -16,7 +16,6 @@ ifneq ($(KERNELRELEASE),)
 include $(COMPAT_CONFIG_CW)
 
 NOSTDINC_FLAGS := -I$(M)/include/ \
-	-include $(M)/include/linux/compat-2.6.h \
 	$(CFLAGS)
 
 obj-y := compat/
